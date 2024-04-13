@@ -2,40 +2,51 @@ import React from "react";
 
 const Skills = () => {
   return (
-    <div className="flex h-96 mb-12">
-      <div className="font-body font-bold text-3xl text-[#4731D3] h-auto">
-        <p className="ml-36 mt-12 mb-24">Skills</p>
+    <div className="flex flex-wrap mb-8 mt-8">
+      <div className="font-body font-bold text-3xl text-[#4731D3] h-56 ml-72 mt-12 lg:ml-36 lg:mt-12 lg:mb-12">
+        Skills
       </div>
-      <div className="w-52 h-52 ml-32 font-body font-semibold text-l text-gray-400">
-        <div className="flex items-center mb-[-90px]">
-          <img src="../logos/js-logo.png" alt="" />
-          <p className="mt-[-20px] ml-[-40px]">JAVASCRIPT</p>
-        </div>
-        <div className="flex items-center mb-[-90px]">
-          <img src="../logos/react-logo.png" alt="" />
-          <p className="mt-[-20px] ml-[-40px]">REACT</p>
-        </div>
-        <div className="flex items-center mb-[-90px]">
-          <img src="../logos/redux-logo.png" alt="" />
-          <p className="mt-[-20px] ml-[-40px]">REDUX</p>
-        </div>
-      </div>
-      <div className="w-52 h-52 ml-32 font-body font-semibold text-l text-gray-400">
-        <div className="w-52 h-52 ml-36">
-          <div className="flex items-center mb-[-90px]">
-            <img src="../logos/node-logo.png" alt="" />
-            <p className="mt-[-20px] ml-[-40px]">NODE</p>
-          </div>
-          <div className="flex items-center mb-[-90px]">
-            <img src="../logos/vs-logo.png" alt="" />
-            <p className="mt-[-20px] ml-[-40px]">VSC</p>
-          </div>
-          <div className="flex items-center mb-[-90px]">
-            <img src="../logos/figma-logo.png" alt="" />
-            <p className="mt-[-20px] ml-[-40px]">FIGMA</p>
-          </div>
-        </div>
-      </div>
+      <SkillColumn
+        skills={[
+          { imageName: "js-logo.png", skillName: "JAVASCRIPT" },
+          { imageName: "react-logo.png", skillName: "REACT" },
+          { imageName: "redux-logo.png", skillName: "REDUX" },
+        ]}
+      />
+      <SkillColumn
+        skills={[
+          { imageName: "node-logo.png", skillName: "NODE" },
+          { imageName: "vs-logo.png", skillName: "VSC" },
+          { imageName: "figma-logo.png", skillName: "FIGMA" },
+        ]}
+      />
+    </div>
+  );
+};
+
+const SkillColumn = ({ skills }) => {
+  return (
+    <div className="flex flex-col ">
+      {skills.map((skill, index) => (
+        <SkillItem
+          key={index}
+          imageName={skill.imageName}
+          skillName={skill.skillName}
+        />
+      ))}
+    </div>
+  );
+};
+
+const SkillItem = ({ imageName, skillName }) => {
+  return (
+    <div className="flex items-center lg:mb-[-50px] lg:ml-[180px]">
+      <img
+        src={`../logos/${imageName}`}
+        alt=""
+        className="w-40 h-40 mr-2 mb-[-20px] "
+      />
+      <p>{skillName}</p>
     </div>
   );
 };

@@ -6,10 +6,12 @@ const Hero = () => {
     <div className="flex flex-row justify-center">
       <div className="bg-[#4731D3] text-white h-auto flex-grow">
         <div className="justify-center font-body font-bold text-2xl">
-          <p className="text-[#CBF281] ml-36 mt-12 mb-24">Hasan Sırdaş</p>
+          <p className="text-[#CBF281] ml-40 mt-12 mb-36 lg:ml-36 lg:mt-12 lg:mb-24">
+            Hasan Sırdaş
+          </p>
         </div>
 
-        <div className="ml-36 mt-12 mb-16">
+        <div className="ml-12 mr-12 mt-[200px] lg:ml-36 lg:mt-12 lg:mb-16">
           <p className="font-body font-bold text-6xl text-[#CBF281] mb-6">
             I am a Frontend <br />
             Developer...
@@ -38,7 +40,7 @@ const Hero = () => {
       <img
         src="https://media.licdn.com/dms/image/D4D03AQH3SuVX0xKCgw/profile-displayphoto-shrink_800_800/0/1700637350197?e=1718236800&v=beta&t=QNthLz9HDYDTFbPzBClyH2Lxe6A05WxcHycR5_ECIRU"
         alt="Hasan Sırdaş Profile Picture"
-        className="rounded-xl w-80 h-80 ml-[520px] mt-[140px] absolute"
+        className="rounded-xl w-40 h-40 ml-0 mt-24 lg:w-80 lg:h-80 lg:ml-[520px] lg:mt-[140px] absolute"
       />
     </div>
   );
