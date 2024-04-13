@@ -38,14 +38,14 @@ const Profile = () => {
             </div>
           </div>
         </div>
-        <div className="w-80 h-80 ml-10 mt-[96px]">
+        <div className="w-80 h-80 ml-24 mt-[96px]">
           <img
             src="https://images.unsplash.com/photo-1516542076529-1ea3854896f2?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt=""
             className="rounded-md"
           />
         </div>
-        <div className="ml-10 mt-[96px] font-body font-normal text-white text-xl">
+        <div className="ml-24 mt-[96px] font-body font-normal text-white text-xl">
           <p className="mb-3">About me</p>
           <p className="text-sm">
             2019 yılında teknolojiye olan merakımı <br /> ve müziğe olan ilgimi
