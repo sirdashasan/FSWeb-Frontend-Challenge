@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const useTheme = (initialTheme = "light") => {
+const useLocalTheme = (initialTheme = "light") => {
   const [themeMode, setThemeMode] = useState(() => {
     return localStorage.getItem("theme") || initialTheme;
   });
@@ -17,4 +17,4 @@ const useTheme = (initialTheme = "light") => {
   return { themeMode, darkTheme, lightTheme };
 };
 
-export default useTheme;
+export default useLocalTheme;

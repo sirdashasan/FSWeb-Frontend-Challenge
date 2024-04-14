@@ -21,7 +21,7 @@ const Hero = () => {
         }`}
       >
         <div className="justify-center font-body font-bold text-2xl">
-          <div className="w-full max-w-sm mx-auto flex justify-end mr-[-170px] mb-4 mt-4">
+          <div className="w-full max-w-sm mx-auto flex justify-center lg:justify-end lg:mr-[-170px] mb-4 mt-4">
             <ThemeBtn />
           </div>
           <p className="text-special-green ml-40 mt-12 mb-36 lg:ml-36 lg:mt-12 lg:mb-24">

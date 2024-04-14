@@ -1,15 +1,13 @@
-import { useEffect } from "react";
 import Footer from "./components/Footer";
-import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Profile from "./components/Profile";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import { ThemeProvider } from "./contexts/theme";
-import useTheme from "./hooks/useTheme";
+import useLocalTheme from "./hooks/useLocalTheme";
 
 function App() {
-  const { themeMode, darkTheme, lightTheme } = useTheme();
+  const { themeMode, darkTheme, lightTheme } = useLocalTheme();
 
   return (
     <ThemeProvider value={{ themeMode, darkTheme, lightTheme }}>
