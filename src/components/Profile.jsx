@@ -1,9 +1,15 @@
 import React from "react";
+import useTheme from "../contexts/theme";
 
 const Profile = () => {
+  const { themeMode } = useTheme();
+  const bgColor = themeMode === "dark" ? "bg-darkmodeLeft" : "bg-[#4731D3]";
+
   return (
     <div>
-      <div className="bg-[#4731D3] flex flex-col lg:flex-row h-300 lg:h-96 font-body font-bold">
+      <div
+        className={`${bgColor} flex flex-col lg:flex-row h-300 lg:h-96 font-body font-bold`}
+      >
         <div className="lg:w-1/2">
           <p className="text-[#CBF281] text-3xl ml-6 mt-6 mb-6 lg:mb-6 lg:ml-36 lg:mt-12">
             Profile

@@ -5,13 +5,22 @@ import {
   LinkedinIcon,
   TwitterIcon,
 } from "../icons/icons";
+import useTheme from "../contexts/theme";
 
 const Footer = () => {
+  const { themeMode } = useTheme();
+  const bgColor = themeMode === "dark" ? "bg-[#252128]" : "bg-white";
+  const contentText = themeMode === "dark" ? "text-[#FFFFFF]" : "text-black";
+  const otherTexts = themeMode === "dark" ? "text-[#C1BAED]" : "text-[#4731D3]";
+  const iconColor = themeMode === "dark" ? "#C1BAED" : "#4731D3";
+
   return (
     <div>
-      <div className="bg-white text-[#4731D3] h-auto font-body font-bold mt-12 mb-12 flex items-center flex-col">
+      <div
+        className={`${bgColor} ${otherTexts} h-auto font-body font-bold flex items-center flex-col`}
+      >
         <p className="text-3xl">Send me a message!</p>
-        <p className="text-black font-normal text-center mt-4">
+        <p className={`${contentText} font-normal text-center mt-4`}>
           Got a question or proposal, or just want <br />
           to say hello? Go ahead.
         </p>
@@ -19,11 +28,13 @@ const Footer = () => {
           hasan.sirdas@outlook.com
         </p>
 
-        <div className="flex text-center items-center gap-4 mt-4">
-          <TwitterIcon />
-          <InstagramIcon />
-          <LinkedinIcon />
-          <GithubIcon />
+        <div
+          className={`${iconColor} flex text-center items-center gap-4 mt-4`}
+        >
+          <TwitterIcon color={iconColor} />
+          <InstagramIcon color={iconColor} />
+          <LinkedinIcon color={iconColor} />
+          <GithubIcon color={iconColor} />
         </div>
       </div>
     </div>

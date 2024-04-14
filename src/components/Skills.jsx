@@ -1,9 +1,18 @@
 import React from "react";
+import useTheme from "../contexts/theme";
 
 const Skills = () => {
+  const { themeMode } = useTheme();
+  const backgroundClass =
+    themeMode === "dark" ? "bg-[#2B2727] text-white" : "bg-white";
+  const skillsTextClass =
+    themeMode === "dark" ? "text-[#CBF281]" : "text-[#4731D3]";
+
   return (
-    <div className="flex flex-wrap mb-8 mt-8">
-      <div className="font-body font-bold text-3xl text-[#4731D3] h-56 ml-72 mt-12 lg:ml-36 lg:mt-12 lg:mb-12">
+    <div className={`flex flex-wrap  ${backgroundClass}`}>
+      <div
+        className={`font-body font-bold text-3xl h-56 ml-72 mt-12 lg:ml-36 lg:mt-12 lg:mb-12 ${skillsTextClass}`}
+      >
         Skills
       </div>
       <SkillColumn
