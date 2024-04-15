@@ -27,7 +27,7 @@ const ChangeLanguageButton = () => {
 
   return (
     <div>
-      <div className="font-body font-semibold text-sm ">
+      <div className="font-body font-semibold text-base ">
         <button onClick={handleClick}>{buttonText}</button>
       </div>
     </div>

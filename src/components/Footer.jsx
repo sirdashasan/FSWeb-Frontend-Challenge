@@ -20,7 +20,7 @@ const Footer = () => {
   return (
     <div>
       <div
-        className={`${bgColor} ${otherTexts} h-[300px] mt-[100px] font-body font-bold flex items-center flex-col`}
+        className={`${bgColor} ${otherTexts} h-[380px] pt-[100px] font-body font-bold flex items-center flex-col`}
       >
         <p className="text-3xl">{t.footerp1}</p>
         <p className={`${contentText} font-normal text-center mt-4`}>
@@ -32,7 +32,7 @@ const Footer = () => {
         </p>
 
         <div
-          className={`${iconColor} flex text-center items-center gap-4 mt-4`}
+          className={`${iconColor} flex text-center items-center gap-4 mt-4 `}
         >
           <TwitterIcon color={iconColor} />
           <InstagramIcon color={iconColor} />

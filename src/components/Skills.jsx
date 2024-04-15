@@ -12,9 +12,9 @@ const Skills = () => {
   const { t } = useTranslations();
 
   return (
-    <div className={`flex flex-col lg:flex-row flex-wrap ${backgroundClass}`}>
+    <div className={`flex flex-col lg:flex-row flex-wrap  ${backgroundClass}`}>
       <div
-        className={`font-body font-bold text-4xl h-56 mb-[-200px] ml-12 mt-12 lg:ml-36 lg:mt-12 lg:mb-12 ${skillsTextClass}`}
+        className={`font-body font-bold text-4xl h-56 lg:h-[400px] mb-[-200px] ml-12 mt-12 lg:ml-36 lg:mt-16 lg:mb-6 ${skillsTextClass}`}
       >
         {t.skills}
       </div>
@@ -38,7 +38,7 @@ const Skills = () => {
 
 const SkillColumn = ({ skills }) => {
   return (
-    <div className="font-body font-semibold text-sm text-gray-400 flex flex-col justify-start ml-[80px] mt-[0px] lg:mt-6">
+    <div className="font-body font-semibold text-md text-gray-400 flex flex-col justify-start ml-[80px] mt-[0px] lg:mt-6">
       {skills.map((skill, index) => (
         <SkillItem
           key={index}
@@ -56,7 +56,7 @@ const SkillItem = ({ imageName, skillName }) => {
       <img
         src={`../logos/${imageName}`}
         alt=""
-        className="w-40 h-40 mr-2 ml-[-80px] lg:ml-[140px] mb-[-20px] "
+        className="w-auto  h-[200px] mr-2 ml-[-80px] lg:ml-[140px] mb-[-20px] "
       />
       <p>{skillName}</p>
     </div>

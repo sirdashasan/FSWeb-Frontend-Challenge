@@ -4,7 +4,7 @@ export default {
     projects: "Projeler",
 
     /*Hero*/
-    herop1a: "Ben bir Önyüz",
+    herop1a: "Ben bir Arayüz",
     herop1b: "Geliştiriciyim",
     herop2a:
       "...mükemmel kullanıcı deneyimlerine sahip, sağlam ve ölçeklenebilir",
