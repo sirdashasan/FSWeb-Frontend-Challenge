@@ -38,7 +38,7 @@ const Skills = () => {
 
 const SkillColumn = ({ skills }) => {
   return (
-    <div className="flex flex-col justify-start ml-[80px] mt-[0px] lg:mt-6">
+    <div className="font-body font-semibold text-sm text-gray-400 flex flex-col justify-start ml-[80px] mt-[0px] lg:mt-6">
       {skills.map((skill, index) => (
         <SkillItem
           key={index}
