@@ -1,5 +1,6 @@
 import React from "react";
 import useTheme from "../contexts/theme";
+import useTranslations from "../hooks/useTranslations";
 
 const Skills = () => {
   const { themeMode } = useTheme();
@@ -8,12 +9,14 @@ const Skills = () => {
   const skillsTextClass =
     themeMode === "dark" ? "text-[#CBF281]" : "text-[#4731D3]";
 
+  const { t } = useTranslations();
+
   return (
-    <div className={`flex flex-wrap  ${backgroundClass}`}>
+    <div className={`flex flex-col lg:flex-row flex-wrap ${backgroundClass}`}>
       <div
-        className={`font-body font-bold text-3xl h-56 ml-72 mt-12 lg:ml-36 lg:mt-12 lg:mb-12 ${skillsTextClass}`}
+        className={`font-body font-bold text-4xl h-56 mb-[-200px] ml-12 mt-12 lg:ml-36 lg:mt-12 lg:mb-12 ${skillsTextClass}`}
       >
-        Skills
+        {t.skills}
       </div>
       <SkillColumn
         skills={[
@@ -35,7 +38,7 @@ const Skills = () => {
 
 const SkillColumn = ({ skills }) => {
   return (
-    <div className="flex flex-col ">
+    <div className="flex flex-col justify-start ml-[80px] mt-[0px] lg:mt-6">
       {skills.map((skill, index) => (
         <SkillItem
           key={index}
@@ -49,11 +52,11 @@ const SkillColumn = ({ skills }) => {
 
 const SkillItem = ({ imageName, skillName }) => {
   return (
-    <div className="flex items-center lg:mb-[-50px] lg:ml-[180px]">
+    <div className="flex items-center lg:mb-[-50px]">
       <img
         src={`../logos/${imageName}`}
         alt=""
-        className="w-40 h-40 mr-2 mb-[-20px] "
+        className="w-40 h-40 mr-2 ml-[-80px] lg:ml-[140px] mb-[-20px] "
       />
       <p>{skillName}</p>
     </div>

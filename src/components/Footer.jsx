@@ -6,6 +6,7 @@ import {
   TwitterIcon,
 } from "../icons/icons";
 import useTheme from "../contexts/theme";
+import useTranslations from "../hooks/useTranslations";
 
 const Footer = () => {
   const { themeMode } = useTheme();
@@ -14,15 +15,17 @@ const Footer = () => {
   const otherTexts = themeMode === "dark" ? "text-[#C1BAED]" : "text-[#4731D3]";
   const iconColor = themeMode === "dark" ? "#C1BAED" : "#4731D3";
 
+  const { t } = useTranslations();
+
   return (
     <div>
       <div
-        className={`${bgColor} ${otherTexts} h-auto font-body font-bold flex items-center flex-col`}
+        className={`${bgColor} ${otherTexts} h-[300px] mt-[100px] font-body font-bold flex items-center flex-col`}
       >
-        <p className="text-3xl">Send me a message!</p>
+        <p className="text-3xl">{t.footerp1}</p>
         <p className={`${contentText} font-normal text-center mt-4`}>
-          Got a question or proposal, or just want <br />
-          to say hello? Go ahead.
+          {t.footerp2} <br />
+          {t.footerp3}
         </p>
         <p className="font-semibold text-center underline mt-4">
           hasan.sirdas@outlook.com

@@ -1,9 +1,12 @@
 import React from "react";
 import useTheme from "../contexts/theme";
+import useTranslations from "../hooks/useTranslations";
 
 const Profile = () => {
   const { themeMode } = useTheme();
   const bgColor = themeMode === "dark" ? "bg-darkmodeLeft" : "bg-[#4731D3]";
+
+  const { t } = useTranslations();
 
   return (
     <div>
@@ -11,35 +14,31 @@ const Profile = () => {
         className={`${bgColor} flex flex-col lg:flex-row h-300 lg:h-96 font-body font-bold`}
       >
         <div className="lg:w-1/2">
-          <p className="text-[#CBF281] text-3xl ml-6 mt-6 mb-6 lg:mb-6 lg:ml-36 lg:mt-12">
-            Profile
+          <p className="text-[#CBF281] text-4xl ml-6 mt-6 mb-6 lg:mb-6 lg:ml-36 lg:mt-12">
+            {t.profile}
           </p>
           <div className="ml-6 lg:ml-36 mt-4 font-body font-normal">
-            <p className="text-white text-xl mb-4">Basic Information</p>
+            <p className="text-white text-xl mb-4">{t.basicInformation}</p>
             <div className="text-white font-light text-sm">
               <p className="mb-4">
                 <span className="text-[#CBF281] font-semibold">
-                  Doğum Tarihi:
+                  {t.birthday}
                 </span>{" "}
                 21.01.1996
               </p>
               <p className="mb-4">
-                <span className="text-[#CBF281] font-semibold">
-                  İkamet Şehri:
-                </span>{" "}
+                <span className="text-[#CBF281] font-semibold">{t.city}</span>{" "}
                 İzmir
               </p>
               <p className="mb-4">
                 <span className="text-[#CBF281] font-semibold">
-                  Eğitim Durumu:
+                  {t.education}
                 </span>{" "}
                 Celal Bayar Üni. Mekatronik Müh. Lisans, <br /> Enerji
                 Sistemleri Müh. Yüksek Lisans
               </p>
               <p className="mb-4">
-                <span className="text-[#CBF281] font-semibold">
-                  Tercih Ettiği Rol:
-                </span>{" "}
+                <span className="text-[#CBF281] font-semibold">{t.role}</span>{" "}
                 Business Development
               </p>
             </div>
@@ -53,7 +52,7 @@ const Profile = () => {
           />
         </div>
         <div className="ml-6 lg:ml-[-60px] mb-8 mt-6 mr-6 lg:mr-24 lg:mt-24 font-body font-normal text-white text-l">
-          <p className="mb-3 text-xl">About me</p>
+          <p className="mb-3 text-xl">{t.aboutTitle}</p>
           <p className="text-sm">
             2019 yılında teknolojiye olan merakımı <br /> ve müziğe olan ilgimi
             birleştirerek <br /> Meet The Music girişimini kurdum. <br />

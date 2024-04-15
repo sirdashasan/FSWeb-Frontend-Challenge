@@ -1,5 +1,6 @@
 import React from "react";
 import useTheme from "../contexts/theme";
+import useTranslations from "../hooks/useTranslations";
 
 const Projects = () => {
   const { themeMode } = useTheme();
@@ -17,26 +18,30 @@ const Projects = () => {
       : "bg-white text-black";
   const bottomText = themeMode === "dark" ? "text-[#CBF281]" : "text-black";
 
+  const { t } = useTranslations();
+
   return (
     <div>
-      <div className={`${bgColor} h-auto lg:h-[800px] font-body font-bold`}>
-        <p className={`${mainProjectTitle} text-3xl ml-6 lg:ml-36 pt-12`}>
-          Projects
+      <div className={`${bgColor} h-[1500px] lg:h-[800px] font-body font-bold`}>
+        <p className={`${mainProjectTitle} text-4xl ml-6 lg:ml-36 pt-12`}>
+          {t.projects}
         </p>
 
-        <div className={`${boxColor} mt-8 ml-6 lg:ml-36 mr-6 lg:mr-36 rounded`}>
+        <div
+          className={`${boxColor} mt-8 ml-6 lg:ml-36 mr-6 lg:mr-36 lg:h-[300px] rounded`}
+        >
           <div className="flex-none lg:flex">
             <img
               src="https://cryptocointracker.com/images/coingecko-crypto-sheet-tracker.png"
               alt=""
-              className="w-full h-60 rounded-t p-2"
+              className="lg:w-800 h-auto lg:h-[320px] rounded-t pt-6 pl-6 pr-6 lg:pt-4 lg:pl-4 lg:pr-4 lg:pb-10"
             />
 
             <div className="p-6">
-              <p className={`${projectTitleText} text-lg font-bold mb-4`}>
+              <p className={`${projectTitleText} text-2xl font-bold mb-4`}>
                 Crypto Project
               </p>
-              <p className={`${contentText} font-normal text-sm mb-4`}>
+              <p className={`${contentText} font-normal text-md mb-4`}>
                 Sade bir tasarım ile kripto paraların son durumunun takip
                 edilebileceği, arama yapılarak istenilen coinin ayrıntılı
                 görüntülebileceği bir kripto para projesi. React, JS, Tailwind
@@ -45,17 +50,17 @@ const Projects = () => {
 
               <div className="flex flex-wrap mb-4">
                 <button
-                  className={`${labelButtons} text-white hover:bg-[#CBF281] hover:text-[#4731D3] font-body font-normal text-sm ml-2 mt-2 p-2 rounded-3xl`}
+                  className={`${labelButtons} text-white hover:bg-[#CBF281] hover:text-[#4731D3] font-body font-normal text-md ml-0 mt-2 p-2 rounded-3xl`}
                 >
                   react
                 </button>
                 <button
-                  className={`${labelButtons} text-white hover:bg-[#CBF281] hover:text-[#4731D3] font-body font-normal text-sm ml-2 mt-2 p-2 rounded-3xl`}
+                  className={`${labelButtons} text-white hover:bg-[#CBF281] hover:text-[#4731D3] font-body font-normal text-md ml-2 mt-2 p-2 rounded-3xl`}
                 >
                   context
                 </button>
                 <button
-                  className={`${labelButtons} text-white hover:bg-[#CBF281] hover:text-[#4731D3] font-body font-normal text-sm ml-2 mt-2 p-2 rounded-3xl`}
+                  className={`${labelButtons} text-white hover:bg-[#CBF281] hover:text-[#4731D3] font-body font-normal text-md ml-2 mt-2 p-2 rounded-3xl`}
                 >
                   vercel
                 </button>
@@ -63,12 +68,12 @@ const Projects = () => {
 
               <div className="flex mb-4">
                 <button
-                  className={`${bottomButton} font-body font-semibold text-sm rounded-3xl w-1/2 mr-2`}
+                  className={`${bottomButton} font-body font-semibold text-md rounded-3xl w-24 ml-[-10px]`}
                 >
                   <p className={`underline ${bottomText}`}>View Site</p>
                 </button>
                 <button
-                  className={`${bottomButton} font-body font-semibold text-sm rounded-3xl w-1/2 mr-2`}
+                  className={`${bottomButton} font-body font-semibold text-md rounded-3xl w-24 mr-2`}
                 >
                   <p className={`underline ${bottomText}`}>Github</p>
                 </button>
@@ -77,19 +82,21 @@ const Projects = () => {
           </div>
         </div>
 
-        <div className={`${boxColor} mt-8 ml-6 lg:ml-36 mr-6 lg:mr-36 rounded`}>
+        <div
+          className={`${boxColor} mt-8 ml-6 lg:ml-36 mr-6 lg:mr-36 lg:h-[300px] rounded`}
+        >
           <div className="flex-none lg:flex">
             <img
               src="https://cryptocointracker.com/images/coingecko-crypto-sheet-tracker.png"
               alt=""
-              className="w-full h-60 rounded-t p-2"
+              className="lg:w-800 h-auto lg:h-[320px] rounded-t pt-6 pl-6 pr-6 lg:pt-4 lg:pl-4 lg:pr-4 lg:pb-10"
             />
 
             <div className="p-6">
-              <p className={`${projectTitleText} text-lg font-bold mb-4`}>
+              <p className={`${projectTitleText} text-2xl font-bold mb-4`}>
                 Crypto Project
               </p>
-              <p className={`${contentText} font-normal text-sm mb-4`}>
+              <p className={`${contentText} font-normal text-md mb-4`}>
                 Sade bir tasarım ile kripto paraların son durumunun takip
                 edilebileceği, arama yapılarak istenilen coinin ayrıntılı
                 görüntülebileceği bir kripto para projesi. React, JS, Tailwind
@@ -98,17 +105,17 @@ const Projects = () => {
 
               <div className="flex flex-wrap mb-4">
                 <button
-                  className={`${labelButtons} text-white hover:bg-[#CBF281] hover:text-[#4731D3] font-body font-normal text-sm ml-2 mt-2 p-2 rounded-3xl`}
+                  className={`${labelButtons} text-white hover:bg-[#CBF281] hover:text-[#4731D3] font-body font-normal text-md ml-0 mt-2 p-2 rounded-3xl`}
                 >
                   react
                 </button>
                 <button
-                  className={`${labelButtons} text-white hover:bg-[#CBF281] hover:text-[#4731D3] font-body font-normal text-sm ml-2 mt-2 p-2 rounded-3xl`}
+                  className={`${labelButtons} text-white hover:bg-[#CBF281] hover:text-[#4731D3] font-body font-normal text-md ml-2 mt-2 p-2 rounded-3xl`}
                 >
                   context
                 </button>
                 <button
-                  className={`${labelButtons} text-white hover:bg-[#CBF281] hover:text-[#4731D3] font-body font-normal text-sm ml-2 mt-2 p-2 rounded-3xl`}
+                  className={`${labelButtons} text-white hover:bg-[#CBF281] hover:text-[#4731D3] font-body font-normal text-md ml-2 mt-2 p-2 rounded-3xl`}
                 >
                   vercel
                 </button>
@@ -116,12 +123,12 @@ const Projects = () => {
 
               <div className="flex mb-4">
                 <button
-                  className={`${bottomButton} font-body font-semibold text-sm rounded-3xl w-1/2 mr-2`}
+                  className={`${bottomButton} font-body font-semibold text-md rounded-3xl w-24 ml-[-10px]`}
                 >
                   <p className={`underline ${bottomText}`}>View Site</p>
                 </button>
                 <button
-                  className={`${bottomButton} font-body font-semibold text-sm rounded-3xl w-1/2 mr-2`}
+                  className={`${bottomButton} font-body font-semibold text-md rounded-3xl w-24 mr-2`}
                 >
                   <p className={`underline ${bottomText}`}>Github</p>
                 </button>
