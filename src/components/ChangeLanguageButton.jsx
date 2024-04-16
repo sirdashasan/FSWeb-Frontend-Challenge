@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import useTranslations from "../hooks/useTranslations";
 import { TranslationsContext } from "../contexts/TranslationProvider";
+import { toast } from "react-toastify";
 
 const ChangeLanguageButton = () => {
   const { changeLanguage } = useTranslations();
@@ -9,8 +10,10 @@ const ChangeLanguageButton = () => {
   const handleClick = () => {
     if (language === "tr") {
       changeLanguage("en");
+      toast.success("Language changed to English!");
     } else {
       changeLanguage("tr");
+      toast.success("Dil Türkçe'ye değiştirildi!");
     }
   };
 

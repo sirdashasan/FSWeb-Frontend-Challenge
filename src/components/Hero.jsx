@@ -33,20 +33,20 @@ const Hero = () => {
   const data = response && response.data;
 
   return (
-    <div className="flex flex-row justify-center">
-      <div
+    <article className="flex flex-row justify-center">
+      <section
         className={`h-auto flex-grow text-white ${
           themeMode === "dark" ? "bg-darkmodeLeft" : "bg-lightmodeLeft"
         }`}
       >
-        <div className="justify-center font-body font-bold text-2xl">
-          <div className="w-full max-w-sm mx-auto flex justify-start ml-[120px] mr-[100px] lg:justify-end lg:ml-[610px]  mt-4">
+        <nav className="justify-center font-body font-bold text-2xl">
+          <div className="w-full max-w-sm mx-auto flex justify-start ml-[120px] mr-[100px] lg:justify-end lg:ml-[610px] mt-4">
             <ChangeLanguageButton />
           </div>
           <div className="w-full max-w-sm mx-auto flex justify-end lg:justify-end lg:mr-[-170px] mb-4 mt-[-22px] ">
             <ThemeBtn />
           </div>
-        </div>
+        </nav>
         <p className="text-special-green font-body font-bold text-3xl flex justify-start lg:flex lg:justify-center ml-[50px] mt-10 mb-36 lg:ml-[-530px] lg:flex-none lg:mt-12 lg:mb-24">
           {data.name}
         </p>
@@ -64,7 +64,7 @@ const Hero = () => {
               className={`${buttonBgColor} ${buttonBorderColor} ${buttonTextColor} border-2 hover:bg-special-green text-special-blue font-body font-semibold text-sm ml-0 mt-4 mr-4 mb-24 p-2 rounded w-28`}
             >
               <div
-                className={`${iconColor}items-center flex gap-2 justify-center`}
+                className={`${iconColor} items-center flex gap-2 justify-center`}
                 onClick={() =>
                   window.open("https://github.com/sirdashasan", "_blank")
                 }
@@ -77,7 +77,7 @@ const Hero = () => {
               className={`${buttonBgColor} ${buttonBorderColor} ${buttonTextColor} border-2 hover:bg-special-green text-special-blue font-body font-semibold text-sm ml-0 mt-4 mr-4 mb-24 p-2 rounded w-28`}
             >
               <div
-                className={`${iconColor}items-center flex gap-2 justify-center`}
+                className={`${iconColor} items-center flex gap-2 justify-center`}
                 onClick={() =>
                   window.open(
                     "https://www.linkedin.com/in/sirdashasan/",
@@ -91,7 +91,7 @@ const Hero = () => {
             </button>
           </div>
         </div>
-      </div>
+      </section>
       <div
         className={`hidden lg:block h-auto w-1/3 flex-none flex items-center justify-center ${
           themeMode === "dark" ? "bg-darkmodeRight" : "bg-lightmodeRight"
@@ -99,11 +99,10 @@ const Hero = () => {
       ></div>
       <img
         src={data.image}
-        /* "https://media.licdn.com/dms/image/D4D03AQH3SuVX0xKCgw/profile-displayphoto-shrink_800_800/0/1700637350197?e=1718236800&v=beta&t=QNthLz9HDYDTFbPzBClyH2Lxe6A05WxcHycR5_ECIRU"  */
         alt="Hasan Sırdaş Profile Picture"
         className="rounded-xl  w-40 h-40 ml-[-220px] mt-36 lg:w-80 lg:h-80 lg:ml-[540px] lg:mt-[190px] absolute"
       />
-    </div>
+    </article>
   );
 };
 

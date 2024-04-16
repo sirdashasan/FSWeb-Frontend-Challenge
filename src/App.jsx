@@ -6,6 +6,8 @@ import Skills from "./components/Skills";
 import TranslationsProvider from "./contexts/TranslationProvider.jsx";
 import { ThemeProvider } from "./contexts/theme";
 import useLocalTheme from "./hooks/useLocalTheme";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const { themeMode, darkTheme, lightTheme } = useLocalTheme();
@@ -13,6 +15,7 @@ function App() {
   return (
     <TranslationsProvider>
       <ThemeProvider value={{ themeMode, darkTheme, lightTheme }}>
+        <ToastContainer />
         <Hero />
         <Skills />
         <Profile />
