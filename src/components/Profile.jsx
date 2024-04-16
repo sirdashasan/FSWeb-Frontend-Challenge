@@ -1,28 +1,12 @@
 import React from "react";
 import useTheme from "../contexts/theme";
 import useTranslations from "../hooks/useTranslations";
-import useAxios from "../hooks/useAxios";
 
 const Profile = () => {
   const { themeMode } = useTheme();
   const bgColor = themeMode === "dark" ? "bg-darkmodeLeft" : "bg-[#4731D3]";
 
   const { t } = useTranslations();
-
-  const { response, loading, error } = useAxios(
-    "https://run.mocky.io/v3/4490faf1-52b2-4657-81ec-eb168c3c767e"
-  );
-
-  if (loading) {
-    return <div>Loading...</div>;
-  }
-
-  if (error) {
-    return <div>Error: {error.message}</div>;
-  }
-
-  const profile = response && response.profile;
-  console.log(profile);
 
   return (
     <div>
@@ -40,21 +24,19 @@ const Profile = () => {
                 <span className="text-[#CBF281] font-body font-semibold">
                   {t.birthday}
                 </span>{" "}
-                <span className="font-body font-normal">
-                  {profile?.dateOfBirth}
-                </span>
+                <span className="font-body font-normal">{t.birthdayValue}</span>
               </p>
               <p className="mb-4">
                 <span className="text-[#CBF281] font-body font-semibold">
                   {t.city}
                 </span>{" "}
-                <span className="font-body font-normal">{profile?.city}</span>
+                <span className="font-body font-normal">{t.cityValue}</span>
               </p>
               <div className="mb-4">
                 <span className="text-[#CBF281] font-body font-semibold">
                   {t.education}
                 </span>
-                {profile?.education.map((item, index) => (
+                {t.educationValue.map((item, index) => (
                   <div key={index} className="font-body font-normal">
                     {item}
                   </div>
@@ -64,7 +46,7 @@ const Profile = () => {
                 <span className="text-[#CBF281] font-body font-semibold">
                   {t.role}
                 </span>{" "}
-                <span className="font-body font-normal">{profile?.role}</span>
+                <span className="font-body font-normal">{t.roleValue}</span>
               </p>
             </div>
           </div>
@@ -79,12 +61,11 @@ const Profile = () => {
         <div className="ml-6 lg:ml-[-350px] mb-8 mt-6 mr-6 lg:mr-24 lg:mt-40 font-body font-normal text-white text-l">
           <p className="mb-3 text-xl">{t.aboutTitle}</p>
           <p className="text-sm">
-            2019 yılında teknolojiye olan merakımı <br /> ve müziğe olan ilgimi
-            birleştirerek <br /> Meet The Music girişimini kurdum. <br />
-            2023 yılında 3.5 milyon dolar değerleme <br /> ile bir yatırım
-            turunu tamamladım. <br /> 5 yıldır Business, Finans, Marketing ve{" "}
-            <br /> Product gibi alanlarda çalıştım. Şimdi ise <br />
-            Workintech ile yazılım öğreniyorum.
+            {t.aboutValuep1} <br /> {t.aboutValuep2} <br /> {t.aboutValuep3}{" "}
+            <br />
+            {t.aboutValuep4} <br /> {t.aboutValuep5} <br /> {t.aboutValuep6}
+            <br /> {t.aboutValuep7} <br />
+            {t.aboutValuep8}
           </p>
         </div>
       </div>

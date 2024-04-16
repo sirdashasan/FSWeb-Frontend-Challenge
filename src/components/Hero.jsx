@@ -4,6 +4,7 @@ import ThemeBtn from "./ThemeBtn";
 import useTheme from "../contexts/theme";
 import ChangeLanguageButton from "./ChangeLanguageButton";
 import useTranslations from "../hooks/useTranslations";
+import useAxios from "../hooks/useAxios";
 
 const Hero = () => {
   const { themeMode } = useTheme();
@@ -16,6 +17,20 @@ const Hero = () => {
   const iconColor = themeMode === "dark" ? "white" : "#4731D3";
 
   const { t } = useTranslations();
+
+  const { response, loading, error } = useAxios(
+    "https://run.mocky.io/v3/06a2a977-e299-4649-815b-265a0cecc08c"
+  );
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
+
+  const data = response && response.data;
 
   return (
     <div className="flex flex-row justify-center">
@@ -33,7 +48,7 @@ const Hero = () => {
           </div>
         </div>
         <p className="text-special-green font-body font-bold text-3xl flex justify-start lg:flex lg:justify-center ml-[50px] mt-10 mb-36 lg:ml-[-530px] lg:flex-none lg:mt-12 lg:mb-24">
-          Hasan Sırdaş
+          {data.name}
         </p>
 
         <div className="ml-12 mr-12 mt-[200px] lg:ml-36 lg:mt-12 lg:mb-16">
@@ -74,7 +89,8 @@ const Hero = () => {
         }`}
       ></div>
       <img
-        src="https://media.licdn.com/dms/image/D4D03AQH3SuVX0xKCgw/profile-displayphoto-shrink_800_800/0/1700637350197?e=1718236800&v=beta&t=QNthLz9HDYDTFbPzBClyH2Lxe6A05WxcHycR5_ECIRU"
+        src={data.image}
+        /* "https://media.licdn.com/dms/image/D4D03AQH3SuVX0xKCgw/profile-displayphoto-shrink_800_800/0/1700637350197?e=1718236800&v=beta&t=QNthLz9HDYDTFbPzBClyH2Lxe6A05WxcHycR5_ECIRU"  */
         alt="Hasan Sırdaş Profile Picture"
         className="rounded-xl  w-40 h-40 ml-[-220px] mt-36 lg:w-80 lg:h-80 lg:ml-[540px] lg:mt-[190px] absolute"
       />
