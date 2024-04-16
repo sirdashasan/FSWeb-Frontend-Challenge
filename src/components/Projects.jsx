@@ -32,20 +32,18 @@ const Projects = () => {
         >
           <div className="flex-none lg:flex">
             <img
-              src="https://cryptocointracker.com/images/coingecko-crypto-sheet-tracker.png"
+              src="/images/crypto.png"
               alt=""
               className="lg:w-800 h-auto lg:h-[320px] rounded-t pt-6 pl-6 pr-6 lg:pt-4 lg:pl-4 lg:pr-4 lg:pb-10"
             />
 
             <div className="p-6">
               <p className={`${projectTitleText} text-2xl font-bold mb-4`}>
-                Crypto Project
+                {t.project1Title}
               </p>
               <p className={`${contentText} font-normal text-md mb-4`}>
-                Sade bir tasarım ile kripto paraların son durumunun takip
-                edilebileceği, arama yapılarak istenilen coinin ayrıntılı
-                görüntülebileceği bir kripto para projesi. React, JS, Tailwind
-                CSS ve Context API ile oluşturuldu.
+                {t.project1p1} <br /> {t.project1p2} <br /> {t.project1p3}{" "}
+                <br /> {t.project1p4}
               </p>
 
               <div className="flex flex-wrap mb-4">
@@ -69,11 +67,20 @@ const Projects = () => {
               <div className="flex mb-4">
                 <button
                   className={`${bottomButton} font-body font-semibold text-md rounded-3xl w-24 ml-[-10px]`}
+                  onClick={() =>
+                    window.open("https://crypto-lyart-pi.vercel.app/", "_blank")
+                  }
                 >
-                  <p className={`underline ${bottomText}`}>View Site</p>
+                  <p className={`underline ${bottomText}`}>{t.project1view}</p>
                 </button>
                 <button
                   className={`${bottomButton} font-body font-semibold text-md rounded-3xl w-24 mr-2`}
+                  onClick={() =>
+                    window.open(
+                      "https://github.com/sirdashasan/crypto",
+                      "_blank"
+                    )
+                  }
                 >
                   <p className={`underline ${bottomText}`}>Github</p>
                 </button>
@@ -87,20 +94,18 @@ const Projects = () => {
         >
           <div className="flex-none lg:flex">
             <img
-              src="https://cryptocointracker.com/images/coingecko-crypto-sheet-tracker.png"
+              src="/images/pizza.png"
               alt=""
               className="lg:w-800 h-auto lg:h-[320px] rounded-t pt-6 pl-6 pr-6 lg:pt-4 lg:pl-4 lg:pr-4 lg:pb-10"
             />
 
             <div className="p-6">
               <p className={`${projectTitleText} text-2xl font-bold mb-4`}>
-                Crypto Project
+                {t.project2Title}
               </p>
               <p className={`${contentText} font-normal text-md mb-4`}>
-                Sade bir tasarım ile kripto paraların son durumunun takip
-                edilebileceği, arama yapılarak istenilen coinin ayrıntılı
-                görüntülebileceği bir kripto para projesi. React, JS, Tailwind
-                CSS ve Context API ile oluşturuldu.
+                {t.project2p1} <br /> {t.project2p2} <br /> {t.project2p3}{" "}
+                <br /> {t.project2p4}
               </p>
 
               <div className="flex flex-wrap mb-4">
@@ -112,8 +117,9 @@ const Projects = () => {
                 <button
                   className={`${labelButtons} text-white hover:bg-[#CBF281] hover:text-[#4731D3] font-body font-normal text-md ml-2 mt-2 p-2 rounded-3xl`}
                 >
-                  context
+                  cypress
                 </button>
+
                 <button
                   className={`${labelButtons} text-white hover:bg-[#CBF281] hover:text-[#4731D3] font-body font-normal text-md ml-2 mt-2 p-2 rounded-3xl`}
                 >
@@ -124,11 +130,23 @@ const Projects = () => {
               <div className="flex mb-4">
                 <button
                   className={`${bottomButton} font-body font-semibold text-md rounded-3xl w-24 ml-[-10px]`}
+                  onClick={() =>
+                    window.open(
+                      "https://pizza-nine-theta.vercel.app/",
+                      "_blank"
+                    )
+                  }
                 >
-                  <p className={`underline ${bottomText}`}>View Site</p>
+                  <p className={`underline ${bottomText}`}>{t.project2view}</p>
                 </button>
                 <button
                   className={`${bottomButton} font-body font-semibold text-md rounded-3xl w-24 mr-2`}
+                  onClick={() =>
+                    window.open(
+                      "https://github.com/sirdashasan/fsweb-s7-challenge-pizza-main",
+                      "_blank"
+                    )
+                  }
                 >
                   <p className={`underline ${bottomText}`}>Github</p>
                 </button>

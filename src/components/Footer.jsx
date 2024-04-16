@@ -34,10 +34,18 @@ const Footer = () => {
         <div
           className={`${iconColor} flex text-center items-center gap-4 mt-4 `}
         >
-          <TwitterIcon color={iconColor} />
-          <InstagramIcon color={iconColor} />
-          <LinkedinIcon color={iconColor} />
-          <GithubIcon color={iconColor} />
+          <button>
+            <TwitterIcon color={iconColor} />
+          </button>
+          <button>
+            <InstagramIcon color={iconColor} />
+          </button>
+          <button>
+            <LinkedinIcon color={iconColor} />
+          </button>
+          <button>
+            <GithubIcon color={iconColor} />
+          </button>
         </div>
       </div>
     </div>

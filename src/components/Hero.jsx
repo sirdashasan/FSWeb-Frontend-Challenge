@@ -65,6 +65,9 @@ const Hero = () => {
             >
               <div
                 className={`${iconColor}items-center flex gap-2 justify-center`}
+                onClick={() =>
+                  window.open("https://github.com/sirdashasan", "_blank")
+                }
               >
                 <GithubIcon color={iconColor} />
                 Github
@@ -75,6 +78,12 @@ const Hero = () => {
             >
               <div
                 className={`${iconColor}items-center flex gap-2 justify-center`}
+                onClick={() =>
+                  window.open(
+                    "https://www.linkedin.com/in/sirdashasan/",
+                    "_blank"
+                  )
+                }
               >
                 <LinkedinIcon color={iconColor} />
                 Linkedin
