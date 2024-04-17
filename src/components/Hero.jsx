@@ -48,7 +48,8 @@ const Hero = () => {
           </div>
         </nav>
         <p className="text-special-green font-body font-bold text-3xl flex justify-start lg:flex lg:justify-center ml-[50px] mt-10 mb-36 lg:ml-[-530px] lg:flex-none lg:mt-12 lg:mb-24">
-          {data.name}
+          {/* {data.name} */}
+          Hasan Sırdaş
         </p>
 
         <div className="ml-12 mr-12 mt-[200px] lg:ml-36 lg:mt-12 lg:mb-16">
@@ -98,8 +99,7 @@ const Hero = () => {
         }`}
       ></div>
       <img
-        src={data.image}
-        /* "https://media.licdn.com/dms/image/D4D03AQH3SuVX0xKCgw/profile-displayphoto-shrink_800_800/0/1700637350197?e=1718236800&v=beta&t=QNthLz9HDYDTFbPzBClyH2Lxe6A05WxcHycR5_ECIRU"  */
+        src /* {data.image} */="https://media.licdn.com/dms/image/D4D03AQH3SuVX0xKCgw/profile-displayphoto-shrink_800_800/0/1700637350197?e=1718236800&v=beta&t=QNthLz9HDYDTFbPzBClyH2Lxe6A05WxcHycR5_ECIRU"
         alt="Hasan Sırdaş Profile Picture"
         className="rounded-xl  w-40 h-40 ml-[-220px] mt-36 lg:w-80 lg:h-80 lg:ml-[540px] lg:mt-[190px] absolute"
       />
