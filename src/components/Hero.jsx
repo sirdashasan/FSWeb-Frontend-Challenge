@@ -4,7 +4,7 @@ import ThemeBtn from "./ThemeBtn";
 import useTheme from "../contexts/theme";
 import ChangeLanguageButton from "./ChangeLanguageButton";
 import useTranslations from "../hooks/useTranslations";
-import useAxios from "../hooks/useAxios";
+// import useAxios from "../hooks/useAxios";
 
 const Hero = () => {
   const { themeMode } = useTheme();
@@ -18,7 +18,7 @@ const Hero = () => {
 
   const { t } = useTranslations();
 
-  const { response, loading, error } = useAxios(
+  /* const { response, loading, error } = useAxios(
     "https://run.mocky.io/v3/06a2a977-e299-4649-815b-265a0cecc08c"
   );
 
@@ -30,7 +30,7 @@ const Hero = () => {
     return <div>Error: {error.message}</div>;
   }
 
-  const data = response && response.data;
+  const data = response && response.data; */
 
   return (
     <article className="flex flex-row justify-center">
